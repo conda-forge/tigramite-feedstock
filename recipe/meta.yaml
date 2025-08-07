@@ -12,15 +12,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy  >=1.18
     - scipy  >=1.10.0
     - six
@@ -32,6 +32,7 @@ test:
     - tigramite.toymodels
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
