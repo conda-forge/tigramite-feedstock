@@ -1,5 +1,5 @@
 {% set name = "tigramite" %}
-{% set version = "5.2.8.2" %}
+{% set version = "5.2.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bfc28bbb94fbff0306b8cdd0c9d4bac3fa9d34cfacf4c0ad94b405343797019e
+  sha256: e8be0a03354f5dfa2eb4179682a663b2d470e78e4a8ba49d68e0f3479939bdb8
 
 build:
   noarch: python
